@@ -1,0 +1,50 @@
+@use 'colors' as *;
+
+// Оформление заголовка первого уровня.
+@mixin h1 {
+    justify-self: start;
+    font-size: 2.5rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid $accent;
+}
+
+// Оформление кнопки / ссылки.
+@mixin btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid $accent;
+    border-radius: 0.5rem;
+    background-color: $primary;
+    color: $secondary;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.2rem;
+    transition: all 0.2s ease-in-out;
+
+    // Оформление при наведении и фокусе.
+    &:hover,
+    &:focus {
+        background-color: $accent;
+        color: $primary;
+    }
+
+    // Оформление для выключенной кнопки.
+    // Кнопка обычно выключается во время обращения к серверу,
+    // чтобы избежать повторного обращения, пока запрос не завершился.
+    &:disabled {
+        background-color: dark($primary, 0.5);
+        color: $secondary;
+    }
+}
+
+//
+// Вызывается, когда нужно поменять стили для маленького экрана.
+// $max-width - максимальная ширина экрана
+// (если ширина экрана меньше указанной, медиа-запрос применит переданные стили, тем самым переопределив изначальные).
+//
+@mixin break($max-width: 800px) {
+    @media screen and (max-width: #{$max-width}) {
+        @content;
+    }
+}

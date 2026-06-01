@@ -1,0 +1,24 @@
+@use 'sass:color';
+
+$primary: rgb(13, 13, 13); // Первичный цвет.
+$secondary: rgb(241, 241, 241); // Вторичный цвет (должен максимально контрастировать с первичным).
+$accent: rgb(48, 145, 255); // Акцент.
+$error: rgb(255, 116, 116); // Цвет ошибки (для сообщений об ошибках).
+
+//
+// Осветляет цвет.
+// $color - цвет.
+// $amount - процент осветления (0-100).
+//
+@function light($color, $amount) {
+    @return color.adjust($color: $color, $lightness: $amount * 1%);
+}
+
+//
+// Затемняет цвет.
+// $color - цвет.
+// $amount - процент затемнения (0-100).
+//
+@function dark($color, $amount) {
+    @return color.adjust($color: $color, $lightness: $amount * -1%);
+}

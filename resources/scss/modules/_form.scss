@@ -1,0 +1,38 @@
+@use '../helpers/colors' as *;
+@use '../helpers/mixins' as *;
+
+.form {
+    &__row {
+        //
+    }
+
+    &__label {
+        // Модификатор - ошибка.
+        &_error {
+            //
+        }
+    }
+
+    &__input {
+        &:hover,
+        &:focus {
+            //
+        }
+
+        // Модификатор - ошибка.
+        &_error {
+            &:hover,
+            &:focus {
+                //
+            }
+        }
+    }
+
+    &__error {
+        //
+    }
+
+    &__btn {
+        @include btn;
+    }
+}
