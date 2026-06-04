@@ -2,11 +2,18 @@
 @use '../helpers/mixins' as *;
 
 .form {
+    display: grid;
+    gap: 10px;
+    place-items: center;
+
     &__row {
-        //
+        display: grid;
+        gap: 10px;
+        place-items: center;
     }
 
     &__label {
+
         // Модификатор - ошибка.
         &_error {
             //
@@ -14,6 +21,11 @@
     }
 
     &__input {
+        padding: 10px;
+        border: 1px solid #000;
+        font-size: 1rem;
+        border-radius: 5px;
+
         &:hover,
         &:focus {
             //
@@ -21,6 +33,7 @@
 
         // Модификатор - ошибка.
         &_error {
+
             &:hover,
             &:focus {
                 //

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthController;
 use Illuminate\Support\Facades\Route;
 // Используем контроллер.
 use App\Http\Controllers\HomeController;
@@ -10,12 +11,14 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 // Неавторизованные пользователи
 Route::middleware(['guest'])->group(function () {
     //
+    Route::get('/login', [AuthController::class, 'login'])->name('login');
+    Route::post('/login', [AuthController::class, 'authenticate'])->name('authenticate');
 });
 
 // Авторизованные пользователи
 Route::middleware(['auth'])->group(function () {
     //
-
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     // Пользователи
     Route::middleware(['can:user'])->group(function () {
         //
