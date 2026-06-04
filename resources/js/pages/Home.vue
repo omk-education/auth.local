@@ -15,8 +15,9 @@ import { Head } from '@inertiajs/vue3';
 
 <style lang="scss">
 .home {
-    &__title {
 
+    &__title {
+        @include h1;
     }
 
 }

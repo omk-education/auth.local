@@ -2,10 +2,12 @@
 
 // Оформление заголовка первого уровня.
 @mixin h1 {
-    justify-self: start;
+    justify-self: center;
+    align-self: start;
     font-size: 2.5rem;
     padding-bottom: 0.25rem;
     border-bottom: 2px solid $accent;
+    margin-bottom: 20px;
 }
 
 // Оформление кнопки / ссылки.

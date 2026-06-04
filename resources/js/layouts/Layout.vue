@@ -26,6 +26,8 @@ import VHeader from './partials/VHeader.vue';
 }
 
 .app {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1rem;
     // Базовая разметка документа.
     display: grid;
     grid-template-rows:

@@ -55,7 +55,7 @@ const form = useForm({
                 </div>
                 <!-- submit -->
                 <div class="form__row">
-                    <button type="submit" :disabled="form.processing">
+                    <button class="form__btn" type="submit" :disabled="form.processing">
                         Вход
                     </button>
                 </div>
@@ -65,8 +65,5 @@ const form = useForm({
 </template>
 
 <style lang="scss">
-.home {
-    &__title {
-    }
-}
+
 </style>
