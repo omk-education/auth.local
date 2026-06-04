@@ -10,7 +10,7 @@ const user = computed(() => page.props.auth.user);
 <template>
     <header class="header">
         <nav class="header__nav">
-            <span class="header__text-logo"> Название приложения </span>
+            <span class="header__text-logo"> Корок.Нет </span>
 
             <Link class="header__link" :href="route('home')"> Главная </Link>
 
@@ -47,10 +47,12 @@ const user = computed(() => page.props.auth.user);
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
+        place-items: center;
     }
 
     &__text-logo {
-        font-size: 1rem;
+        font-size: 1.5rem;
+        font-weight: bold;
     }
 
     &__link {
