@@ -65,5 +65,11 @@ const form = useForm({
 </template>
 
 <style lang="scss">
+.home {
 
+    &__title {
+        @include h1;
+    }
+
+}
 </style>

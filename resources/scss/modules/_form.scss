@@ -10,10 +10,12 @@
         display: grid;
         gap: 10px;
         place-items: center;
+        // grid-auto-flow: column;
     }
 
     &__label {
         font-size: 1rem;
+        font-weight: bold;
         // Модификатор - ошибка.
         &_error {
             //

@@ -45,14 +45,12 @@ const user = computed(() => page.props.auth.user);
 
     &__nav {
         display: flex;
-        gap: 10px;
-        place-items: center;
-        place-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
     &__text-logo {
         font-size: 1rem;
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     }
 
     &__link {
