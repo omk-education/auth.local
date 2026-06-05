@@ -18,6 +18,10 @@ const user = computed(() => page.props.auth.user);
                 Вход
             </Link>
 
+            <Link v-if="!user" class="header__link" :href="route('register.create')">
+                Регистрация
+            </Link>
+
             <a v-if="user" class="header__link">
                 {{ user.name }}
             </a>

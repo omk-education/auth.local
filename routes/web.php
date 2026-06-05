@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 // Используем контроллер.
 use App\Http\Controllers\HomeController;
@@ -13,6 +14,10 @@ Route::middleware(['guest'])->group(function () {
     //
     Route::get('/login', [AuthController::class, 'login'])->name('login');
     Route::post('/login', [AuthController::class, 'authenticate'])->name('authenticate');
+    Route::resource('register', RegisterController::class)->only([
+        'create',
+        'store'
+    ]);
 });
 
 // Авторизованные пользователи

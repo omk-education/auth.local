@@ -5,7 +5,6 @@ import { Head, useForm } from '@inertiajs/vue3';
 const form = useForm({
     login: null,
     password: null,
-    remember: false,
 });
 </script>
 
@@ -47,11 +46,6 @@ const form = useForm({
                     <div class="form__error" v-if="form.errors.password">
                         {{ form.errors.password }}
                     </div>
-                </div>
-                <!-- remember me -->
-                <div class="form__row">
-                    <input type="checkbox" v-model="form.remember" /> Запомнить
-                    меня
                 </div>
                 <!-- submit -->
                 <div class="form__row">
