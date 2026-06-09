@@ -5,6 +5,8 @@ import { computed } from 'vue';
 const page = usePage();
 
 const user = computed(() => page.props.auth.user);
+const isAdmin = computed(() => page.props.auth.user?.role === 'admin');
+const isUser = computed(() => page.props.auth.user?.role === 'user');
 </script>
 
 <template>
@@ -18,13 +20,29 @@ const user = computed(() => page.props.auth.user);
                 Вход
             </Link>
 
-            <Link v-if="!user" class="header__link" :href="route('register.create')">
+            <Link
+                v-if="!user"
+                class="header__link"
+                :href="route('register.create')"
+            >
                 Регистрация
             </Link>
 
-            <a v-if="user" class="header__link">
+            <Link v-if="isAdmin" class="header__link" :href="route('admin')">
+                Панель администратора
+            </Link>
+
+            <Link v-if="isUser" class="header__link" :href="route('user')">
+                Мои заявки
+            </Link>
+
+            <Link v-if="isUser" class="header__link" :href="route('create')">
+                Создать заявку
+            </Link>
+
+            <!-- <a v-if="user" class="header__link">
                 {{ user.name }}
-            </a>
+            </a> -->
 
             <Link
                 v-if="user"

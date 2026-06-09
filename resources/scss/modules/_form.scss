@@ -11,6 +11,7 @@
         gap: 10px;
         place-items: center;
         // grid-auto-flow: column;
+        // width: 100%;
     }
 
     &__label {
@@ -27,6 +28,7 @@
         border: 1px solid #000;
         font-size: 1rem;
         border-radius: 5px;
+        width: 100%;
 
         &:hover,
         &:focus {
@@ -50,5 +52,6 @@
 
     &__btn {
         @include btn;
+        width: 100%;
     }
 }

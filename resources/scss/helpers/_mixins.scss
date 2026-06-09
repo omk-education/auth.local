@@ -8,6 +8,20 @@
     padding-bottom: 0.25rem;
     border-bottom: 2px solid $accent;
     margin-bottom: 20px;
+
+    &:hover {
+        animation: .5s linear slidein;
+    }
+}
+
+@keyframes slidein {
+  from {
+    border-bottom: 2px solid $secondary;
+  }
+
+  to {
+    border-bottom: 2px solid $accent;
+  }
 }
 
 // Оформление кнопки / ссылки.
