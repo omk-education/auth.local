@@ -96,6 +96,20 @@ import { Head } from '@inertiajs/vue3';
     padding: 1rem;
 
     background-color: #fff;
+    animation: slide-in 0.5s linear;
+
+
+}
+
+@keyframes slide-in {
+  from {
+
+    transform: translateY(-10%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
 }
 
 .card h2 {

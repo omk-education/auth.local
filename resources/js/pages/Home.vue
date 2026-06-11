@@ -30,6 +30,16 @@ import { Head } from '@inertiajs/vue3';
                     src="images/image09.webp"
                     alt="Кабинет"
                 />
+                <img
+                    class="slider__image"
+                    src="images/image08.webp"
+                    alt="Кабинет"
+                />
+                <img
+                    class="slider__image"
+                    src="images/image09.webp"
+                    alt="Кабинет"
+                />
             </div>
         </div>
     </Layout>
