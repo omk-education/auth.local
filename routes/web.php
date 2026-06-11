@@ -29,6 +29,8 @@ Route::middleware(['auth'])->group(function () {
     // Пользователи
     Route::middleware(['can:user'])->group(function () {
         //
+        Route::get('/user', [UserController::class, 'index'])->name('user');
+        Route::get('/create', [UserController::class, 'create'])->name('create');
     });
 
     // Администраторы

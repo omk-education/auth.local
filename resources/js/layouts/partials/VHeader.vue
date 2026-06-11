@@ -24,6 +24,14 @@ const isUser = computed(() => page.props.auth.user?.role === 'user');
                 Панель администратора
             </Link>
 
+            <Link v-if="isUser" class="header__link" :href="route('user')">
+                Мои заявки
+            </Link>
+
+            <Link v-if="isUser" class="header__link" :href="route('create')">
+                Создать заявку
+            </Link>
+
             <Link
                 v-if="!user"
                 class="header__link"
