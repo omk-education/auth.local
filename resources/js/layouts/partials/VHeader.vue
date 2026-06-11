@@ -20,6 +20,10 @@ const isUser = computed(() => page.props.auth.user?.role === 'user');
                 Вход
             </Link>
 
+            <Link v-if="isAdmin" class="header__link" :href="route('admin')">
+                Панель администратора
+            </Link>
+
             <Link
                 v-if="!user"
                 class="header__link"
@@ -27,22 +31,6 @@ const isUser = computed(() => page.props.auth.user?.role === 'user');
             >
                 Регистрация
             </Link>
-
-            <Link v-if="isAdmin" class="header__link" :href="route('admin')">
-                Панель администратора
-            </Link>
-
-            <Link v-if="isUser" class="header__link" :href="route('user')">
-                Мои заявки
-            </Link>
-
-            <Link v-if="isUser" class="header__link" :href="route('create')">
-                Создать заявку
-            </Link>
-
-            <!-- <a v-if="user" class="header__link">
-                {{ user.name }}
-            </a> -->
 
             <Link
                 v-if="user"

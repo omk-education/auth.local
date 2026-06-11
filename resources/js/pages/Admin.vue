@@ -4,23 +4,53 @@ import { Head } from '@inertiajs/vue3';
 </script>
 
 <template>
+    <Head title="Главная"></Head>
+
     <Layout>
         <div class="home">
-            <Head title="Главная"></Head>
             <h1 class="home__title">Панель администратора</h1>
+
+            <label class="form__label" for="status">Статус</label>
+
+            <select class="form__input" name="status" id="status">
+                <option>Все</option>
+                <option>Новая</option>
+                <option>Идет обучение</option>
+                <option>Обучение завершено</option>
+            </select>
+
             <div class="cards">
+                <article class="card">
+                    <header>
+                        <h2>🟢Основы алгоритмизации и программирования</h2>
+                    </header>
+                    <div class="content">
+                        <p>Дата начала обучения: 11.06.2026</p>
+                        <p>Телефон: +7(999)77-77-777</p>
 
+                        <label class="form__label" for="status">Статус</label>
+
+                        <select class="form__input" name="status" id="status">
+                            <option>Новая</option>
+                            <option>Идет обучение</option>
+                            <option>Обучение завершено</option>
+                        </select>
+
+                        <button class="form__btn">Изменить</button>
+                    </div>
+                </article>
 
                 <article class="card">
                     <header>
                         <h2>🟢Основы алгоритмизации и программирования</h2>
                     </header>
                     <div class="content">
-                        <p>Дата начала обучения: 06-06-2026</p>
-                        <p>Оплата: наличными</p>
-                        <p>Телефон: +7777777777777</p>
+                        <p>Дата начала обучения: 11.06.2026</p>
+                        <p>Телефон: +7(999)77-77-777</p>
 
-                        <select class="form__input">
+                        <label class="form__label" for="status">Статус</label>
+
+                        <select class="form__input" name="status" id="status">
                             <option>Новая</option>
                             <option>Идет обучение</option>
                             <option>Обучение завершено</option>
@@ -29,18 +59,18 @@ import { Head } from '@inertiajs/vue3';
                         <button class="form__btn">Изменить</button>
                     </div>
                 </article>
-
 
                 <article class="card">
                     <header>
                         <h2>🟢Основы алгоритмизации и программирования</h2>
                     </header>
                     <div class="content">
-                        <p>Дата начала обучения: 06-06-2026</p>
-                        <p>Оплата: наличными</p>
-                        <p>Телефон: +7777777777777</p>
+                        <p>Дата начала обучения: 11.06.2026</p>
+                        <p>Телефон: +7(999)77-77-777</p>
 
-                        <select class="form__input">
+                        <label class="form__label" for="status">Статус</label>
+
+                        <select class="form__input" name="status" id="status">
                             <option>Новая</option>
                             <option>Идет обучение</option>
                             <option>Обучение завершено</option>
@@ -50,19 +80,18 @@ import { Head } from '@inertiajs/vue3';
                     </div>
                 </article>
 
-
                 <article class="card">
                     <header>
-                        <h2>🟡Основы алгоритмизации и программирования</h2>
+                        <h2>🟡Основы проектирования баз данных</h2>
                     </header>
                     <div class="content">
-                        <p>Дата начала обучения: 06-06-2026</p>
-                        <p>Оплата: наличными</p>
-                        <p>Телефон: +7777777777777</p>
+                        <p>Дата начала обучения: 11.06.2026</p>
+                        <p>Телефон: +7(999)77-77-777</p>
 
-                        <select class="form__input">
-                            <!-- <option>Новая</option> -->
-                            <option selected>Идет обучение</option>
+                        <label class="form__label" for="status">Статус</label>
+
+                        <select class="form__input" name="status" id="status">
+                            <option>Идет обучение</option>
                             <option>Обучение завершено</option>
                         </select>
 
@@ -70,26 +99,89 @@ import { Head } from '@inertiajs/vue3';
                     </div>
                 </article>
 
-
                 <article class="card">
                     <header>
-                        <h2>🔵Основы алгоритмизации и программирования</h2>
+                        <h2>🟡Основы веб-дизайна</h2>
                     </header>
                     <div class="content">
-                        <p>Дата начала обучения: 06-06-2026</p>
-                        <p>Оплата: наличными</p>
-                        <p>Телефон: +7777777777777</p>
+                        <p>Дата начала обучения: 11.06.2026</p>
+                        <p>Телефон: +7(999)77-77-777</p>
 
-                        <select class="form__input" disabled>
-                            <option>Новая</option>
+                        <label class="form__label" for="status">Статус</label>
+
+                        <select class="form__input" name="status" id="status">
                             <option>Идет обучение</option>
-                            <option selected>Обучение завершено</option>
+                            <option>Обучение завершено</option>
                         </select>
 
-                        <button class="form__btn" disabled>Изменить</button>
+                        <button class="form__btn">Изменить</button>
                     </div>
                 </article>
 
+                <article class="card">
+                    <header>
+                        <h2>🟢Основы алгоритмизации и программирования</h2>
+                    </header>
+                    <div class="content">
+                        <p>Дата начала обучения: 11.06.2026</p>
+                        <p>Телефон: +7(999)77-77-777</p>
+
+                        <label class="form__label" for="status">Статус</label>
+
+                        <select class="form__input" name="status" id="status">
+                            <option>Новая</option>
+                            <option>Идет обучение</option>
+                            <option>Обучение завершено</option>
+                        </select>
+
+                        <button class="form__btn">Изменить</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <header>
+                        <h2>🔵Основы веб-дизайна</h2>
+                    </header>
+                    <div class="content">
+                        <p>Дата начала обучения: 11.06.2026</p>
+                        <p>Телефон: +7(999)77-77-777</p>
+
+                        <label class="form__label" for="status">Статус</label>
+
+                        <select
+                            class="form__input"
+                            name="status"
+                            id="status"
+                            disabled
+                        >
+                            <option>Обучение завершено</option>
+                        </select>
+
+                        <p>
+                            <b>Отзыв:</b> курс очень понравился. Крутые преподаватели
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <header>
+                        <h2>🟢Основы алгоритмизации и программирования</h2>
+                    </header>
+                    <div class="content">
+                        <p>Дата начала обучения: 11.06.2026</p>
+                        <p>Телефон: +7(999)77-77-777</p>
+
+                        <label class="form__label" for="status">Статус</label>
+
+                        <select class="form__input" name="status" id="status">
+                            <option>Новая</option>
+                            <option>Идет обучение</option>
+                            <option>Обучение завершено</option>
+                        </select>
+
+                        <button class="form__btn">Изменить</button>
+                    </div>
+                </article>
             </div>
         </div>
     </Layout>
@@ -99,8 +191,8 @@ import { Head } from '@inertiajs/vue3';
 .home {
     display: grid;
     gap: 10px;
-    place-items: center;
-    //
+    align-content: start;
+    justify-content: center;
     &__title {
         //
         @include h1;
@@ -108,27 +200,31 @@ import { Head } from '@inertiajs/vue3';
 }
 
 .cards {
+    padding: 20px;
+
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-gap: 20px;
 }
 
 .card {
-    display: grid;
-    // grid-template-rows: max-content 200px 1fr;
-    border: 1px solid #000;
-    padding: 1rem;
+    border: 1px solid #999999;
     border-radius: 10px;
-    gap: 10px;
+
+    display: grid;
+    gap: 20px;
+    padding: 1rem;
+
+    background-color: #fff;
 }
 
-.card img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+.card h2 {
+    margin: 0;
+    padding: 0.5rem;
 }
 
-.content {
+.card .content {
+    padding: 0.5rem;
     display: grid;
     gap: 10px;
 }

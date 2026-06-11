@@ -8,6 +8,9 @@
 
 <style lang="scss">
 .footer {
+    display: grid;
+    place-items: center;
+    padding: 10px;
     &__copyright {
         //
     }

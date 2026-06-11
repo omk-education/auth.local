@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     /**
-     * Отображает страницу Администратора.
+     * Отображает стартовую страницу.
      */
     public function index()
     {
