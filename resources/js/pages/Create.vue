@@ -1,13 +1,17 @@
 <script setup>
 import Layout from '@/layouts/Layout.vue';
-import { Head, useForm } from '@inertiajs/vue3';
+import { Head, useForm, usePage } from '@inertiajs/vue3';
+import { computed } from 'vue';
+
+const page = usePage();
+
+const id = computed(() => page.props.auth.user.id);
 
 const form = useForm({
     name: null,
-    login: null,
-    email: null,
-    tel: null,
-    password: null,
+    date: null,
+    pay: null,
+    user_id: id.value,
 });
 </script>
 
@@ -17,19 +21,33 @@ const form = useForm({
     <Layout>
         <div class="home">
             <h1 class="home__title">Создать заявку</h1>
-            <form class="form" @submit.prevent="form.get(route('user'))">
+            <form
+                class="form"
+                @submit.prevent="form.post(route('applications.store'))"
+            >
                 <!-- name -->
                 <div class="form__row">
-                    <label class="form__label" for="status">Название курса</label>
+                    <label class="form__label" for="name">Название курса</label>
 
-                    <select class="form__input" name="status" id="status">
-                        <option>Основы алгоритмизации и программирования</option>
+                    <select
+                        class="form__input"
+                        name="name"
+                        id="name"
+                        v-model="form.name"
+                    >
+                        <option>
+                            Основы алгоритмизации и программирования
+                        </option>
                         <option>Основы веб-дизайна</option>
                         <option>Основы проектирования баз данных</option>
                     </select>
+
+                    <div class="form__error" v-if="form.errors.name">
+                        {{ form.errors.name }}
+                    </div>
                 </div>
 
-                <!-- email -->
+                <!-- date -->
                 <div class="form__row">
                     <label class="form__label" for="date">
                         Дата начала обучения
@@ -47,13 +65,23 @@ const form = useForm({
                 </div>
 
                 <div class="form__row">
-                    <label class="form__label" for="status">Способ оплаты</label>
+                    <label class="form__label" for="pay">Способ оплаты</label>
 
-                    <select class="form__input" name="status" id="status">
+                    <select
+                        class="form__input"
+                        name="pay"
+                        id="pay"
+                        v-model="form.pay"
+                    >
                         <option>Наличными</option>
                         <option>По номеру телефона</option>
                     </select>
+
+                    <div class="form__error" v-if="form.errors.pay">
+                        {{ form.errors.pay }}
+                    </div>
                 </div>
+
                 <!-- submit -->
                 <div class="form__row">
                     <button

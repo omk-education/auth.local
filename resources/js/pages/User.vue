@@ -1,6 +1,8 @@
 <script setup>
 import Layout from '@/layouts/Layout.vue';
 import { Head } from '@inertiajs/vue3';
+
+defineProps({ applications: Object });
 </script>
 
 <template>
@@ -20,14 +22,14 @@ import { Head } from '@inertiajs/vue3';
             </select>
 
             <div class="cards">
-                <article class="card">
+                <article class="card" v-for="application in applications" :key="application.id">
                     <header>
-                        <h2>🟢Основы алгоритмизации и программирования</h2>
+                        <h2>{{ application.name }}</h2>
                     </header>
                     <div class="content">
-                        <p>Дата начала обучения: 11.06.2026</p>
-                        <p>Способ оплаты: Наличными</p>
-                        <p>Статус: Новая</p>
+                        <p>Дата начала обучения: {{ application.date }}</p>
+                        <p>Способ оплаты: {{ application.pay }}</p>
+                        <p>Статус: {{ application.status }}</p>
                     </div>
                 </article>
 
@@ -42,9 +44,11 @@ import { Head } from '@inertiajs/vue3';
 
                         <label class="form__label" for="status">Отзыв</label>
 
-                        <textarea class="form__input" name="status" id="status">
-
-                        </textarea>
+                        <textarea
+                            class="form__input"
+                            name="status"
+                            id="status"
+                        ></textarea>
 
                         <button class="form__btn">Отправить</button>
                     </div>
@@ -60,8 +64,6 @@ import { Head } from '@inertiajs/vue3';
                         <p>Статус: Обучение идет</p>
                     </div>
                 </article>
-
-
             </div>
         </div>
     </Layout>
@@ -97,19 +99,16 @@ import { Head } from '@inertiajs/vue3';
 
     background-color: #fff;
     animation: slide-in 0.5s linear;
-
-
 }
 
 @keyframes slide-in {
-  from {
+    from {
+        transform: translateY(-10%);
+    }
 
-    transform: translateY(-10%);
-  }
-
-  to {
-    transform: translateY(0%);
-  }
+    to {
+        transform: translateY(0%);
+    }
 }
 
 .card h2 {

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Application;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -28,5 +29,7 @@ class DatabaseSeeder extends Seeder
             'role' => 'admin',
             'password' => 'KorokNET',
         ]);
+
+        Application::factory(10)->create();
     }
 }
